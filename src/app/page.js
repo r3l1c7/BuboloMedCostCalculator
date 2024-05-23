@@ -33,7 +33,6 @@ const handleSearch = (selectedMedication) => {
       <Header />
 
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8">Prescription Cost Calculator</h1>
         <div className="mb-8">
           <SearchBar onSearch={handleSearch} />
         </div>

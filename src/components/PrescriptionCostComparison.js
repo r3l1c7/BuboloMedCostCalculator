@@ -16,12 +16,12 @@ import { Separator } from "@/components/ui/separator"
 
 const PrescriptionCostComparison = ({ medication }) => {
   const pharmacies = [
-    { name: 'Walgreens', price: medication.Walgreens, img: 'http://localhost:3000/walgreens.webp' },
-    { name: 'CVS', price: medication.CVS, img: 'http://localhost:3000/cvs.webp' },
-    { name: 'Walmart', price: medication.Walmart, img: 'http://localhost:3000/walmart.webp' },
+    { name: 'Walgreens', price: medication.Walgreens, img: 'https://bubolo-med-cost-calculator.vercel.app/walgreens.webp' },
+    { name: 'CVS', price: medication.CVS, img: 'https://bubolo-med-cost-calculator.vercel.app/cvs.webp' },
+    { name: 'Walmart', price: medication.Walmart, img: 'https://bubolo-med-cost-calculator.vercel.app/walmart.webp' },
     {
       name: 'GoodRx Average',
-      price: (medication.GoodRXMin + medication.GoodRxMax) / 2, img: 'http://localhost:3000/goodRx.jpg'
+      price: (medication.GoodRXMin + medication.GoodRxMax) / 2, img: 'https://bubolo-med-cost-calculator.vercel.app/goodRx.jpg'
     },
     // Add more pharmacies and their prices
   ];

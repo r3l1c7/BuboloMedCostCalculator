@@ -78,7 +78,7 @@ const PrescriptionCostComparison = ({ medication }) => {
         </CardContent>
         <CardFooter>
           <p></p>
-          <Badge variant="outline" className="text-green-900 bg-slate-000">Dosage: {medication.OurDose}</Badge>
+          <Badge variant="outline" className="text-green-900 bg-slate-000">Dosage: {medication.ProRxDosage}</Badge>
           <Badge variant="outline" className="text-green-900 bg-slate-000 float-right">Average Saving: {formatter.format(avgSaving)}</Badge>
         </CardFooter>
       </Card>

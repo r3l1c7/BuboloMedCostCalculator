@@ -706,5 +706,96 @@
         "Walmart": 21.64,
         "CVS": 18.16,
         "Walgreens": 15.99
-    }
+    },
+    {
+    "Medication": "Botox",
+    "Retail_Price": 13.50,
+    "Retail_Good_RXMin": 10.00,
+    "Retail_Good_RXMax": 16.00,
+    "GoodRXMin": 10.00,
+    "GoodRxMax": 16.00,
+    "Walmart": 12.00,
+    "CVS": 13.00,
+    "Walgreens": 14.00,
+    "ProRx": 7.00,
+    "ProRxDosage": "1 units"
+},
+{
+    "Medication": "Juvederm Ultra XC/Ultra Plus",
+    "Retail_Price": 600.00,
+    "Retail_Good_RXMin": 550.00,
+    "Retail_Good_RXMax": 650.00,
+    "GoodRXMin": 550.00,
+    "GoodRxMax": 650.00,
+    "Walmart": 575.00,
+    "CVS": 590.00,
+    "Walgreens": 610.00,
+    "ProRx": 350.00,
+    "ProRxDosage": "1 syringe"
+},
+{
+    "Medication": "Juvederm Vollure",
+    "Retail_Price": 750.00,
+    "Retail_Good_RXMin": 700.00,
+    "Retail_Good_RXMax": 800.00,
+    "GoodRXMin": 700.00,
+    "GoodRxMax": 800.00,
+    "Walmart": 725.00,
+    "CVS": 740.00,
+    "Walgreens": 760.00,
+    "ProRx": 425.00,
+    "ProRxDosage": "1 syringe"
+},
+{
+    "Medication": "Juvederm Volbella",
+    "Retail_Price": 700.00,
+    "Retail_Good_RXMin": 650.00,
+    "Retail_Good_RXMax": 750.00,
+    "GoodRXMin": 650.00,
+    "GoodRxMax": 750.00,
+    "Walmart": 675.00,
+    "CVS": 690.00,
+    "Walgreens": 710.00,
+    "ProRx": 400.00,
+    "ProRxDosage": "1 syringe"
+},
+{
+    "Medication": "Juvederm Volbella half syringe",
+    "Retail_Price": 375.00,
+    "Retail_Good_RXMin": 350.00,
+    "Retail_Good_RXMax": 400.00,
+    "GoodRXMin": 350.00,
+    "GoodRxMax": 400.00,
+    "Walmart": 360.00,
+    "CVS": 370.00,
+    "Walgreens": 380.00,
+    "ProRx": 250.00,
+    "ProRxDosage": "0.5 syringe"
+},
+{
+    "Medication": "Juvederm Voluma",
+    "Retail_Price": 800.00,
+    "Retail_Good_RXMin": 750.00,
+    "Retail_Good_RXMax": 850.00,
+    "GoodRXMin": 750.00,
+    "GoodRxMax": 850.00,
+    "Walmart": 775.00,
+    "CVS": 790.00,
+    "Walgreens": 810.00,
+    "ProRx": 450.00,
+    "ProRxDosage": "1 syringe"
+},
+{
+    "Medication": "Juvederm Volex",
+    "Retail_Price": 800.00,
+    "Retail_Good_RXMin": 750.00,
+    "Retail_Good_RXMax": 850.00,
+    "GoodRXMin": 750.00,
+    "GoodRxMax": 850.00,
+    "Walmart": 775.00,
+    "CVS": 790.00,
+    "Walgreens": 810.00,
+    "ProRx": 450.00,
+    "ProRxDosage": "1 syringe"
+}
 ]

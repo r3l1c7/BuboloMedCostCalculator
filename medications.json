@@ -1,18 +1,5 @@
 [
     {
-        "Medication": "ALBUTEROL SULFATE HFA 90MCG 8.5GM 200 MDI INHALER LUPIN",
-        "Retail_Price": 55.79000091552734,
-        "Retail_Good_RXMin": 29.0,
-        "Retail_Good_RXMax": 43.0,
-        "GoodRXMin": 13.0,
-        "GoodRxMax": 20.05999946594238,
-        "Walmart": 10.7,
-        "CVS": 14.07,
-        "Walgreens": 11.42,
-        "ProRx": 22.93,
-        "ProRxDosage": "90mcg HFA Inhaler 6.7gm"
-    },
-    {
         "Medication": "ALBUTEROL SULFATE INH 0.083% 2.5MG/3MLX25 NEPHRON",
         "Retail_Price": 38.0,
         "Retail_Good_RXMin": 16.0,

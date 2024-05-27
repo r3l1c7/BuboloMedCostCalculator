@@ -4,7 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
 const PrescriptionCostComparison = ({ medication }) => {
-  const retailPrice = medication.Retail_Price; // Assuming Retail_Price is the correct property
+  const retailPrice = medication.Retail_Price; // The retail price of the medication
+  const ourPrice = medication.ProRx; // Your offering price
+
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -12,15 +14,21 @@ const PrescriptionCostComparison = ({ medication }) => {
     maximumFractionDigits: 2,
   });
 
+  const savings = retailPrice - ourPrice; // Calculate savings
+
   return (
     <div>
       <Card>
         <CardHeader>
-          <CardTitle>Retail Price - {formatter.format(retailPrice)}</CardTitle>
+          <CardTitle>Price Comparison</CardTitle>
           <CardDescription><Badge variant="outline" className="text-green-900 bg-slate-000">{medication.Medication}</Badge></CardDescription>
         </CardHeader>
         <CardContent>
-          <p className="text-xl font-medium my-2">The retail price of {medication.Medication} is <strong>{formatter.format(retailPrice)}</strong>.</p>
+          <div className="flex justify-between items-center">
+            <p className="text-xl font-medium my-2">Retail Price: <strong>{formatter.format(retailPrice)}</strong></p>
+            <p className="text-xl font-medium my-2">Our Price: <strong>{formatter.format(ourPrice)}</strong></p>
+          </div>
+          <p className="text-xl font-medium my-2">You Save: <strong>{formatter.format(savings)}</strong></p>
         </CardContent>
       </Card>
     </div>

@@ -28,7 +28,9 @@ const PrescriptionCostComparison = ({ medication }) => {
             <p className="text-xl font-medium my-2">Retail Price: <strong>{formatter.format(retailPrice)}</strong></p>
             <p className="text-xl font-medium my-2">Our Price: <strong>{formatter.format(ourPrice)}</strong></p>
           </div>
-          <p className="text-xl font-medium my-2">You Save: <strong>{formatter.format(savings)}</strong></p>
+          <div className="text-slate-900">
+            <Badge className="text-green-700 bg-slate-200">You Save: {formatter.format(savings)}</Badge>
+          </div>
         </CardContent>
       </Card>
     </div>

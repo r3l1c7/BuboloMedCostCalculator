@@ -18,27 +18,18 @@ const RecentSearches = ({ searches, onSearch }) => {
     maximumFractionDigits: 2,
   });
 
-  const calculateAverageSavings = (medication) => {
-    const pharmacies = [
-      { name: 'Walgreens', price: medication.Walgreens },
-      { name: 'CVS', price: medication.CVS },
-      { name: 'Walmart', price: medication.Walmart },
-      { name: 'GoodRx Average', price: (medication.GoodRXMin + medication.GoodRxMax) / 2 },
-    ];
+  // Function to calculate savings based on retail price and our price
+  const calculateSavings = (medication) => {
+    const retailPrice = medication.Retail_Price;
     const ourCost = medication.ProRx;
-    let avgSaving = 0;
-
-    pharmacies.forEach(element => {
-      avgSaving = avgSaving + element.price - ourCost;
-    });
-    avgSaving = avgSaving / 4;
-
-    return avgSaving;
+    const savings = retailPrice - ourCost;
+    return savings;
   };
 
+  // Calculate total savings across all searches
   const totalSavings = searches.reduce((total, search) => {
-    const avgSaving = calculateAverageSavings(search);
-    return total + avgSaving;
+    const savings = calculateSavings(search);
+    return total + savings;
   }, 0);
   
   return (
@@ -51,7 +42,7 @@ const RecentSearches = ({ searches, onSearch }) => {
         <div className="bg-white text-blue-500 rounded-lg p-6">
           <ul className="space-y-2">
             {searches.map((search, index) => {
-              const avgSaving = calculateAverageSavings(search);
+              const savings = calculateSavings(search);
               return (
                 <li
                   key={index}
@@ -59,7 +50,7 @@ const RecentSearches = ({ searches, onSearch }) => {
                   onClick={() => onSearch(search)}
                 >
                   <Badge variant="outline" className="text-blue-500">
-                    {search.Medication} - Average Saving: {formatter.format(avgSaving)}
+                    {search.Medication} - Savings: {formatter.format(savings)}
                   </Badge>
                 </li>
               );
@@ -67,7 +58,10 @@ const RecentSearches = ({ searches, onSearch }) => {
           </ul>
         </div>
       </CardContent>
-      <CardFooter><span className="text-slate-800 font-medium">Total Possible Savings For All Searches:   </span> <span className="text-green-600 font-extrabold px-2"> {formatter.format(totalSavings)}</span></CardFooter>
+      <CardFooter>
+        <span className="text-slate-800 font-medium">Total Possible Savings For All Searches:   </span>
+        <span className="text-green-600 font-extrabold px-2">{formatter.format(totalSavings)}</span>
+      </CardFooter>
     </Card>
   );
 };

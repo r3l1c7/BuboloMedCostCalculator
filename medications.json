@@ -797,5 +797,19 @@
     "Walgreens": 810.00,
     "ProRx": 450.00,
     "ProRxDosage": "1 syringe"
+},
+    {
+    "Medication": "Finasteride",
+    "Retail_Price": 35.00,
+    "Retail_Good_RXMin": 25.00,
+    "Retail_Good_RXMax": 40.00,
+    "GoodRXMin": 25.00,
+    "GoodRxMax": 40.00,
+    "Walmart": 30.00,
+    "CVS": 32.00,
+    "Walgreens": 33.00,
+    "ProRx": 4.20,
+    "ProRxDosage": "1mg Tablets #30"
 }
+
 ]

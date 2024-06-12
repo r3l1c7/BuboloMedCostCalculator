@@ -27,10 +27,9 @@ const PrescriptionCostComparison = ({ medication }) => {
           <div className="flex justify-between items-center">
             <p className="text-xl font-medium my-2">Retail Price: <strong>{formatter.format(retailPrice)}</strong></p>
             <p className="text-xl font-medium my-2">
-              Our Price: 
               <strong>
                 <div className="inline-block text-white px-4 py-2 rounded cursor-not-allowed" style={{ backgroundColor: '#cd5928' }}>
-                  {formatter.format(ourPrice)}
+                  Our Price: {formatter.format(ourPrice)}
                 </div>
               </strong>
             </p>

@@ -1,3 +1,4 @@
+// src\components\PrescriptionCostComparison.js
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -16,20 +17,16 @@ const PrescriptionCostComparison = ({ medication }) => {
   const savings = retailPrice - ourPrice; // Calculate savings
 
   return (
-    <div className="p-4">
+    <div>
       <Card>
         <CardHeader>
           <CardTitle>Price Comparison</CardTitle>
-          <CardDescription>
-            <Badge variant="outline" className="text-green-900 bg-slate-100">{medication.Medication}</Badge>
-          </CardDescription>
+          <CardDescription><Badge variant="outline" className="text-green-900 bg-slate-100">{medication.Medication}</Badge></CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-xl font-medium my-2 sm:my-0">
-              Retail Price: <strong>{formatter.format(retailPrice)}</strong>
-            </p>
-            <p className="text-xl font-medium my-2 sm:my-0">
+          <div className="flex justify-between items-center">
+            <p className="text-xl font-medium my-2">Retail Price: <strong>{formatter.format(retailPrice)}</strong></p>
+            <p className="text-xl font-medium my-2">
               <strong>
                 <div className="inline-block text-white px-4 py-2 rounded cursor-not-allowed" style={{ backgroundColor: '#cd5928' }}>
                   Our Price: {formatter.format(ourPrice)}
@@ -37,7 +34,7 @@ const PrescriptionCostComparison = ({ medication }) => {
               </strong>
             </p>
           </div>
-          <div className="mt-4 text-slate-900">
+          <div className="text-slate-900">
             <Badge className="text-green-700 bg-slate-200">You Save: {formatter.format(savings)}</Badge>
           </div>
         </CardContent>
